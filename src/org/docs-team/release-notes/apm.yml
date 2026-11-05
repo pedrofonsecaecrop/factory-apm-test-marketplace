@@ -1,0 +1,10 @@
+name: release-notes
+version: 1.0.0
+description: Write release notes
+author: test
+targets: [claude]
+dependencies:
+  apm: []
+  mcp: []
+includes: auto
+scripts: {}

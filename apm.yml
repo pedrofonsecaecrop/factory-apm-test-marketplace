@@ -1,0 +1,32 @@
+name: factory-apm-test-marketplace
+version: 0.1.0
+description: Test APM marketplace for the factory's package installs
+author: test
+marketplace:
+  owner:
+    name: test
+  versioning:
+    strategy: tag_pattern
+  build:
+    tagPattern: "{name}-v{version}"
+  packages:
+    - name: release-notes
+      description: Write release notes for a change, checked by the note-checker agent
+      source: ./src/org/docs-team/release-notes
+      version: 1.0.0
+      tag_pattern: "{name}-v{version}"
+    - name: note-checker
+      description: Agent that checks release notes
+      source: ./src/org/docs-team/note-checker
+      version: 1.0.0
+      tag_pattern: "{name}-v{version}"
+    - name: notes-kit
+      description: Release notes pack
+      source: ./packages/org/notes-kit
+      version: 1.0.0
+      tag_pattern: "{name}-v{version}"
+    - name: secret-thing
+      description: A private package the picker must hide
+      source: ./src/private/someone/secret-thing
+      version: 1.0.0
+      tag_pattern: "{name}-v{version}"
